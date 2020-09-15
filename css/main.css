@@ -64,6 +64,7 @@ h1 {
   margin: auto;
   padding: 5em 1.2em 0;
 }
+
 .homepage-flex {
   display: flex;
   align-items: center;
@@ -86,10 +87,15 @@ h1 {
   height: 240px;
   width: 84px;
 }
+.side-icon-flag {
+  height: 120px;
+  width: 179px;
+}
+
 /* FOR PHONE ETC */
 @media (max-width: 800px) {
   .homepage-flex {
-    flex-direction: column; /* Makes view on phone change from two columns to row layout instead */
+    flex-direction: column-reverse; /* Makes view on phone change from two columns to row layout instead */
   }
   .column-left {
     margin-bottom: 0px; /* Because otherwise we get too big a space between the two columns */
