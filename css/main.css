@@ -1,6 +1,11 @@
 /* GENERAL STYLES */
 
-
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  padding-top: 5em;
+  width: 100%;
+}
 
 /* BODY STYLES */
 
@@ -54,6 +59,37 @@ h1 {
 .header-nav a:hover {
   color: darkorange;  
 }
+
+/* FOOTER STYLES */
+.footer {
+  background-color: lightblue;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  width: 100%;
+}
+.inside-footer {
+  padding: 1em;
+}
+.footer-nav {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em;
+}
+.footer-nav a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-nav a:hover {
+  color: darkorange;  
+}
+
+
 /* HOMEPAGE STYLES */
 .homepage-intro {
   font-family: 'Source Sans Pro', sans-serif;
@@ -62,7 +98,7 @@ h1 {
   line-height: 1.6;
   max-width: 960px;
   margin: auto;
-  padding: 5em 1.2em 0;
+  padding: 0 3em 0 3em;
 }
 
 .homepage-flex {
@@ -91,7 +127,10 @@ h1 {
   height: 120px;
   width: 179px;
 }
-
+.footer-icon {
+  height: 100px;
+  width: 34px;
+}
 /* FOR PHONE ETC */
 @media (max-width: 800px) {
   .homepage-flex {
@@ -103,6 +142,14 @@ h1 {
   .column-right {
     margin-left: 0px; /*Because this becomes a row so don't want it indented on phone*/
   }
-
+  /* ICON STYLES - Ideally want this to shrink responsively though*/ 
+  .side-icon {
+    height: 180px;
+    width: 63px;
+  }
+  .side-icon-flag {
+    height: 90px;
+    width: 134px;
+  }
   
 }
