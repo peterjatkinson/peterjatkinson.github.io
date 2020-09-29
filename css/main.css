@@ -3,7 +3,7 @@
 .content-container {
   display: flex;
   flex: 1 1 auto;
-  padding-top: 5em;
+  padding-top: 5em; /* Means that nothing will be obscured by the header */
   width: 100%;
 }
 
@@ -11,11 +11,12 @@
 
 /* PARAGRAPH STYLES */
 p ~ p {
-  margin-top: 25px;
+  margin-top: 25px; /* Adds top spacing to all paras after the first one */
 }
 p:last-of-type {
-  margin-bottom: 35px;
-}
+  margin-bottom: 35px; /* bigger margin for very last paragraph in a series */
+} 
+
 /* HEADING STYLES */
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
@@ -98,7 +99,7 @@ h1 {
   line-height: 1.6;
   max-width: 960px;
   margin: auto;
-  padding: 0 3em 0 3em;
+  padding: 0 3em 0 3em; /* Stops text and image from touching edges of window on right and left */
 }
 
 .homepage-flex {
@@ -113,19 +114,24 @@ h1 {
 }
 .column-right {
   flex: 1;
-  margin-left: 25px;
-  display: flex;
+  margin-left: 5vh;
+  display: flex; /* Makes the images inside this column centred */
   justify-content: center;
+
 }
 
-/* ICON STYLES */
-.side-icon {
+/* ICON STYLES HOW TO GET It to fill fixed-size container without specifying specific height/width for each or same dimensions for all? */
+.tall-side-icon {
   height: 240px;
   width: 84px;
 }
-.side-icon-flag {
+.landscape-side-icon {
   height: 120px;
   width: 179px;
+}
+.square-side-icon {
+  height: 150px;
+  width: 150px;
 }
 .footer-icon {
   height: 100px;
@@ -137,19 +143,24 @@ h1 {
     flex-direction: column-reverse; /* Makes view on phone change from two columns to row layout instead */
   }
   .column-left {
-    margin-bottom: 0px; /* Because otherwise we get too big a space between the two columns */
+    margin-bottom: 25px; /* Because otherwise we get too big a space between the two columns */
   }
   .column-right {
     margin-left: 0px; /*Because this becomes a row so don't want it indented on phone*/
   }
+
   /* ICON STYLES - Ideally want this to shrink responsively though*/ 
-  .side-icon {
-    height: 180px;
-    width: 63px;
+  .tall-side-icon {
+    height: 129px;
+    width: 45px;
   }
-  .side-icon-flag {
-    height: 90px;
-    width: 134px;
+  .landscape-side-icon {
+    height: 75px;
+    width: 112px;
+  }
+  .square-side-icon {
+    height: 100px;
+    width: 100px;
   }
   
 }
