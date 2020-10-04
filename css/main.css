@@ -10,12 +10,7 @@
 /* BODY STYLES */
 
 /* PARAGRAPH STYLES */
-p ~ p {
-  margin-top: 25px; /* Adds top spacing to all paras after the first one */
-}
-p:last-of-type {
-  margin-bottom: 35px; /* bigger margin for very last paragraph in a series */
-} 
+
 
 /* HEADING STYLES */
 h1 {
@@ -40,16 +35,16 @@ h1 {
   padding: 0 1.5em 0 0;
   margin: 0 15px 0 0;
   float: right;
-  overflow: hidden;
 }
 .header-nav > li {
   display: inline-block;
-  margin-left: 1em;
-  padding: 0.15em 0.25em 0.2em;
+  padding: 0.15em 1.2em 0.2em; 
 }
 .header-nav > li ~ li {
   border-left: 1px solid rgba(0, 0, 0, 0.3);
-  padding-left: 1.3em;
+}
+.header-nav > li:last-of-type {
+  padding: 0.15em 0.25em 0.2em 1.2em;
 }
 .header-nav a {
   color: #000;
@@ -59,6 +54,67 @@ h1 {
 }
 .header-nav a:hover {
   color: darkorange;  
+}
+
+/* DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-menu {
+  background-color: lightblue;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  padding: 15px 0 0 0;
+  position: absolute;
+  margin: 0 -16px; 
+  min-width: 160px; 
+  list-style: none;
+}
+.drop-menu a {
+  color: rgb(56, 53, 53);
+  font-size: 0.9em;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+.drop-menu li:first-of-type {
+  border-top: solid white 2px;
+  margin-top: 5px;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+
+.dropdown-final {
+  position: relative;
+  display: inline-block;
+}
+.drop-menu-final {
+  background-color: lightblue;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  padding: 15px 0 0 0;
+  position: absolute;
+  margin: 0 0 0 -79px; 
+  min-width: 160px; 
+  list-style: none;
+}
+.drop-menu-final a {
+  color: rgb(56, 53, 53);
+  font-size: 0.9em;
+  padding: 8px 16px;
+  text-align: right;
+  text-decoration: none;
+  display: block;
+}
+.drop-menu-final li:first-of-type {
+  border-top: solid white 2px;
+  margin-top: 5px;
+}
+.dropdown-final:hover .drop-menu-final {
+  display: block;
 }
 
 /* FOOTER STYLES */
