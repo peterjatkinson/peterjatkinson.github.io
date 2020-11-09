@@ -32,7 +32,7 @@ h1 {
   width: 100%;
 }
 .header-nav {
-  padding: 0 1.5em 0 0;
+  padding: 0.5em 1.5em 0 0;
   margin: 0 15px 0 0;
   float: right;
 }
@@ -145,6 +145,18 @@ h1 {
 .footer-nav a:hover {
   color: darkorange;  
 }
+.footer-nav .dropdown:hover .drop-menu {
+  display: none;
+}
+.footer-nav .dropdown-final:hover .drop-menu-final {
+  display: none;
+}
+/* MOBILE MENU */
+
+.mobile-menu-check,
+.show-mobile-menu {
+  display: none;
+}
 
 
 /* HOMEPAGE STYLES */
@@ -193,6 +205,11 @@ h1 {
   height: 100px;
   width: 34px;
 }
+.header-icon {
+  height: 34px;
+  width: 34px;
+}
+
 /* FOR PHONE ETC */
 @media (max-width: 800px) {
   .homepage-flex {
@@ -204,7 +221,10 @@ h1 {
   .column-right {
     margin-left: 0px; /*Because this becomes a row so don't want it indented on phone*/
   }
-
+  /* HEADER STYLES */
+  .header {
+    padding: 0;
+  }
   /* ICON STYLES - Ideally want this to shrink responsively though*/ 
   .tall-side-icon {
     height: 129px;
@@ -218,5 +238,62 @@ h1 {
     height: 100px;
     width: 100px;
   }
-  
+  .header-icon {
+    display: none;
+  }   /* don't display header icon in mobile view */
+
+  /* MOBILE MENU */
+  .show-mobile-menu {
+    display: block;
+    float: right;
+    font-weight: bold;
+    margin-top: 3vh;
+    padding: 1.5vh;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header-nav {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .mobile-menu-check:checked ~ .header-nav {
+    max-height: 300px;
+    float: none;  /* makes lis go from right to left, stops skewing to one side */
+    width: 100%;  /* Moves the menu below the menu text rather than to the side */
+    text-align: center; /* Centers text */
+  }
+  .mobile-menu-check:checked ~ .header-nav > li {
+    display: block;
+    border-left: 0;
+    padding: 1em 0;
+    border-top: 1px dashed black;
+  }
+  /* HEADER STYLES INHEREITED FROM ABOVE:
+  .header-nav {
+    padding: 0.5em 1.5em 0 0;
+    margin: 0 15px 0 0;
+    float: right;
+  }
+  .header-nav > li {
+    display: inline-block;
+    padding: 0.15em 1.2em 0.2em; 
+  }
+  .header-nav > li ~ li {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .header-nav > li:last-of-type {
+    padding: 0.15em 0.25em 0.2em 1.2em;
+  }
+  .header-nav a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .header-nav a:hover {
+    color: darkorange;  
+  } */
 }
