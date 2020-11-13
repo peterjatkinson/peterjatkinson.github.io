@@ -257,13 +257,14 @@ h1 {
     max-height: 0;
     overflow: hidden;
     padding: 0;
-    transition: all 0.5s ease-in-out;
+    /* Removed transition from here and placed below to fix problem of old menu showing when you close it */
   }
   .mobile-menu-check:checked ~ .header-nav {
     max-height: 300px;
     float: none;  /* makes lis go from right to left, stops skewing to one side */
     width: 100%;  /* Moves the menu below the menu text rather than to the side */
     text-align: center; /* Centers text */
+    transition: all 0.5s ease-in;  /* Creates a slow wipe down affect for when you open the menu */
   }
   .mobile-menu-check:checked ~ .header-nav > li {
     display: block;
@@ -271,29 +272,17 @@ h1 {
     padding: 1em 0;
     border-top: 1px dashed black;
   }
-  /* HEADER STYLES INHEREITED FROM ABOVE:
-  .header-nav {
-    padding: 0.5em 1.5em 0 0;
-    margin: 0 15px 0 0;
-    float: right;
+  /* .mobile-menu-close {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 100;
   }
-  .header-nav > li {
-    display: inline-block;
-    padding: 0.15em 1.2em 0.2em; 
-  }
-  .header-nav > li ~ li {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  .header-nav > li:last-of-type {
-    padding: 0.15em 0.25em 0.2em 1.2em;
-  }
-  .header-nav a {
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .header-nav a:hover {
-    color: darkorange;  
-  } */
+  .mobile-menu-check:checked ~ .mobile-menu-close {
+    display: block;
+  }  */
 }
