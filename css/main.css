@@ -65,6 +65,7 @@ h1 {
 .drop-menu {
   background-color: lightblue;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 20px lightblue;
   display: none;
   padding: 15px 0 0 0;
   position: absolute;
@@ -94,6 +95,7 @@ h1 {
 .drop-menu-final {
   background-color: lightblue;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 20px lightblue;
   display: none;
   padding: 15px 0 0 0;
   position: absolute;
@@ -210,6 +212,73 @@ h1 {
   width: 34px;
 }
 
+
+/* ESSAY PAGES AND CONTENT TOGGLING */
+.answer-page {
+  align-items: center;
+}
+.answer-commentary {
+  display: flex;
+  /* So I can move the commentary to right column rather than below (only if flex-direction set to row). This is a div that acts as a cotainer for the complete answer and commentary class sections*/
+  flex-direction: row;
+}
+.answer {
+  flex: 2; /* Only for when commentary text is at the side (flex direction row rather than column), so commentary right colum half size of answer left */
+  margin-bottom: 25px;
+}
+.answer-text {
+  background-color: rgb(215, 227, 233);
+  padding: 15px;
+  border-radius: 15px;
+  font-family: 'Indie Flower', cursive;
+}
+.commentary {
+  flex: 1; /* Only for first example, so commentary right colum half size of answer left/ Only for first example */
+  display: flex; /* So we can stack the content (label and commentary) vertically.*/ 
+  flex-direction: column; /* Column stops the commentary and hte button being shown side by side. Changing to 'column-reverse' would make the button display below the commentary once it appears. */
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.toggle-commentary {
+  display: none; /* Hides the tick box for the input */
+}
+.commentary-label {
+  /* Styles the button/label you click on to hide and reveal commentary */
+  background-color: #D65D5D;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  width: 12em;
+}
+.commentary-content {
+  display: none;
+  font-size: 0.9em;
+  /* Makes it the default not to display the content */
+}
+.toggle-commentary:checked ~ .commentary-content {
+  /* If the input/label is checked (clicked on) then display the content that was initially set to hidden */
+  display: block;
+}
+.commentary-label .hide-commentary {
+  /* So when unchecked (default) the text 'Hide Commentary' doesn't appear */
+  display: none;
+}
+.toggle-commentary:checked + label .hide-commentary {
+  /* So when checked the 'Hide commentary' text does appear */
+  display: inline;
+}
+.toggle-commentary:checked + label .display-commentary {
+  /* So when checked the 'Display commentary' text doesn't appear */
+  display: none;
+}
+
+
+
 /* FOR PHONE ETC */
 @media (max-width: 800px) {
   .homepage-flex {
@@ -241,7 +310,9 @@ h1 {
   .header-icon {
     display: none;
   }   /* don't display header icon in mobile view */
-
+  .answer-commentary {
+    display: inline-block;
+  }
   /* MOBILE MENU */
   .show-mobile-menu {
     display: block;
@@ -272,6 +343,7 @@ h1 {
     padding: 1em 0;
     border-top: 1px dashed black;
   }
+  /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
     width: 100%;
     height: 100%;
