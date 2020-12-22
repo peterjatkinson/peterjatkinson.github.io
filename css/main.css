@@ -343,6 +343,12 @@ h1 {
     padding: 1em 0;
     border-top: 1px dashed black;
   }
+  .dropdown:hover .drop-menu {
+    display: none;
+    /* Stops drop menu from appearing in mobile. Assumes only want main menu headers for the mobile version of the menu. Alternatively get rid of this and work out how to create sub-dropdowns (depends if there's a main page before the subdrop downs, e.g. main UK page, then separate Essay and Source pages, etc. */
+  }
+
+  
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
     width: 100%;

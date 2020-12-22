@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="homepage-intro">
+  <h1>Tabs Test</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales sagittis dolor, a suscipit felis finibus eget. Etiam convallis rhoncus enim quis rutrum. Mauris et bibendum risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis lorem leo, id accumsan orci tempor non. Aenean vel tincidunt ligula. Ut lobortis blandit augue ut tempus. Morbi justo odio, congue sed gravida dictum, vehicula vitae quam. Nunc convallis non urna a dictum. Quisque molestie dolor eu odio efficitur, vel malesuada quam dictum. Ut justo ligula, vestibulum id risus nec, mollis bibendum libero. Praesent ac tellus lorem. 
+  </p>
+
+
+<!-- See examples here: https://www.w3schools.com/w3css/w3css_tabulators.asp -->
+  <div class="w3-container">
+    <h2>Tabs</h2>
+    <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+  </div>
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+  </div>
+
+  <div id="London" class="w3-container city">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Paris" class="w3-container city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <script>
+    function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(cityName).style.display = "block";  
+    }
+  </script>
+<!-- END OF W3 EXAMPLE -->
+
+</div>
