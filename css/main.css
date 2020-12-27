@@ -277,7 +277,31 @@ h1 {
   display: none;
 }
 
-
+/* ACCORDION STYLES */
+.accordion-tabs-bar {
+  margin: 15px 0;
+}
+.tab-button {
+  border: none;
+  background-color: #D65D5D;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  outline: none; /* Removes the black border outline that normally appears once you click a button */
+  padding: 10px;
+}
+.tab-button:hover {
+  background-color: #bd0b0b;
+  cursor: pointer;
+}
+.tab-detail {
+  background-color: rgb(215, 227, 233);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
 
 /* FOR PHONE ETC */
 @media (max-width: 800px) {
