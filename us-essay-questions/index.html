@@ -6,55 +6,71 @@ layout: default
     <h1>Testing tabs using JQuery instead</h1>
 
 
-    <div class="accordion-tabs-bar">
-      <button id="LondonB" class="tab-button">London</button>
-      <button id="ParisB" class="tab-button">Paris</button>
-      <button id="TokyoB" class="tab-button">Tokyo</button>
+  <div class="accordion-tabs-bar">
+    <button id="LondonB" class="tab-button">London</button>
+    <button id="ParisB" class="tab-button">Paris</button>
+    <button id="TokyoB" class="tab-button">Tokyo</button>
+  </div>
+
+  <div class="tab-detail">
+    <p id="currentP" class="current-description description">
+      London is the capital of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a hendrerit turpis, sit amet condimentum erat. In urna nisl, iaculis in efficitur sit amet, aliquet sit amet augue. Maecenas id ex quis metus consequat auctor placerat maximus lectus. Vivamus euismod posuere lectus, et venenatis massa vehicula eu. Sed tortor nisl, condimentum vitae magna sodales, consequat semper enim. Quisque imperdiet tempor urna. Vestibulum placerat bibendum interdum. Aenean consequat sagittis sollicitudin. Curabitur ullamcorper leo in scelerisque hendrerit. Proin rhoncus enim in sodales fringilla.
+    </p>
+    <p id="LondonP" class="hide-description description">
+      London is the capital of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a hendrerit turpis, sit amet condimentum erat. In urna nisl, iaculis in efficitur sit amet, aliquet sit amet augue. Maecenas id ex quis metus consequat auctor placerat maximus lectus. Vivamus euismod posuere lectus, et venenatis massa vehicula eu. Sed tortor nisl, condimentum vitae magna sodales, consequat semper enim. Quisque imperdiet tempor urna. Vestibulum placerat bibendum interdum. Aenean consequat sagittis sollicitudin. Curabitur ullamcorper leo in scelerisque hendrerit. Proin rhoncus enim in sodales fringilla. 
+    </p>
+    <p id="ParisP" class="hide-description description">
+      Paris is the capital of France. Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.
+    </p>
+    <p id="TokyoP" class="hide-description description">
+      Tokyo is the capital of Japan.
+    </p>
+  </div>
+  <div class="background-test">
+</div>
     </div>
 
-    <div class="tab-detail">
-      <p id="currentP" class="current-description description">
-        London is the capital of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a hendrerit turpis, sit amet condimentum erat. In urna nisl, iaculis in efficitur sit amet, aliquet sit amet augue. Maecenas id ex quis metus consequat auctor placerat maximus lectus. Vivamus euismod posuere lectus, et venenatis massa vehicula eu. Sed tortor nisl, condimentum vitae magna sodales, consequat semper enim. Quisque imperdiet tempor urna. Vestibulum placerat bibendum interdum. Aenean consequat sagittis sollicitudin. Curabitur ullamcorper leo in scelerisque hendrerit. Proin rhoncus enim in sodales fringilla.
-      </p>
-      <p id="LondonP" class="hide-description description">
-        London is the capital of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a hendrerit turpis, sit amet condimentum erat. In urna nisl, iaculis in efficitur sit amet, aliquet sit amet augue. Maecenas id ex quis metus consequat auctor placerat maximus lectus. Vivamus euismod posuere lectus, et venenatis massa vehicula eu. Sed tortor nisl, condimentum vitae magna sodales, consequat semper enim. Quisque imperdiet tempor urna. Vestibulum placerat bibendum interdum. Aenean consequat sagittis sollicitudin. Curabitur ullamcorper leo in scelerisque hendrerit. Proin rhoncus enim in sodales fringilla. 
-      </p>
-      <p id="ParisP" class="hide-description description">
-        Paris is the capital of France. Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.Proin rhoncus enim in sodales fringilla.
-      </p>
-      <p id="TokyoP" class="hide-description description">
-        Tokyo is the capital of Japan.
-      </p>
-    </div>
-    <div class="background-test">
+<div class="timeline-container">
+  <div id='timeline-embed' style="margin: auto; width: 100%; height: 700px"></div>
+  <script type="text/javascript">
+    // The TL.Timeline constructor takes at least two arguments:
+    // the id of the Timeline container (no '#'), and
+    // the URL to your JSON data file or Google spreadsheet.
+    // the id must refer to an element "above" this code,
+    // and the element must have CSS styling to give it width and height
+    // optionally, a third argument with configuration options can be passed.
+    // See below for more about options..
+            
+      var additionalOptions = {
+        default_bg_color: {r:90, g:230, b:237},
+        initial_zoom: 5,
+        timenav_position: "top",
+        font: 'fjalla-average',
+        duration: 1, // The animation speed; reduced to nothing as can lag on slower machines
+        timenav_mobile_height_percentage: 10,
+        timenav_height_min: 0,
+        timenav_height_percentage: 5
+      }
 
-    </div>
-  <div class="timeline-container">
-    <div id='timeline-embed' style="margin: auto; width: 100%; height: 700px"></div>
-    <script type="text/javascript">
-      // The TL.Timeline constructor takes at least two arguments:
-      // the id of the Timeline container (no '#'), and
-      // the URL to your JSON data file or Google spreadsheet.
-      // the id must refer to an element "above" this code,
-      // and the element must have CSS styling to give it width and height
-      // optionally, a third argument with configuration options can be passed.
-      // See below for more about options.
-              
-        var additionalOptions = {
-          default_bg_color: {r:90, g:230, b:237},
-          initial_zoom: 6,
-          timenav_position: "top",
-          font: 'fjalla-average',
-          duration: 1, // The animation speed; reduced to nothing as can lag on slower machines
-        }
-  
-        timeline = new TL.Timeline(
-          'timeline-embed',
-          'https://docs.google.com/spreadsheets/d/1o1sImIfY-63KwIpojZz8WoBDIUpDv4LaEdeB6UIB8SI/edit#gid=0',
-          additionalOptions);
-      </script>
+      timeline = new TL.Timeline(
+        'timeline-embed',
+        'https://docs.google.com/spreadsheets/d/1o1sImIfY-63KwIpojZz8WoBDIUpDv4LaEdeB6UIB8SI/edit#gid=0',
+        additionalOptions);
+    </script>
+</div>
+<div class="homepage-intro">
+  <p>More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. 
+  </p>  
+
+  <!-- For desktop -->
+  <div class="wrapper">
+    <iframe class="desktop-map" src="https://maphub.net/embed/128933?legend=1&panel=1" frameborder="0"></iframe>
   </div>
-  <div>
-    <p>More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. More text here. </p>  
-  </div>
+ 
+
+</div>
+
+ <!-- For mobile -->
+ <div class="wrapper2">
+  <iframe class="mobile-map" src="https://maphub.net/embed/128933?legend=1&panel=1&panel_closed=1" frameborder="0"></iframe>
 </div>
