@@ -6,12 +6,13 @@
   HAVE COMMENTED ABOVE OUT AS NOT SURE WHAT IT WAS ACHIEVING. AND INCLUDING IT MEANT THAT THE TEXT ON A PAGE WOULD CENTRE IF THE TEXT DIDN'T FILL THE CONTAINER IT WAS IN.*/ 
   padding-top: 5em; /* Means that nothing will be obscured by the header */
   width: 100%;
-  min-height: 50vh;
-  /* So the footer still stays in place even when there isn't enough text to fill the screen */
+  min-height: calc(100vh - 250px);
 }
 
 /* BODY STYLES */
-
+html, body {
+  height: 100%;
+}
 /* PARAGRAPH STYLES */
 
 
@@ -129,6 +130,7 @@ h1 {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   width: 100%;
+  height: 230px;
 }
 .inside-footer {
   padding: 1em;
