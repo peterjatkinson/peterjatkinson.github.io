@@ -6,7 +6,7 @@
   HAVE COMMENTED ABOVE OUT AS NOT SURE WHAT IT WAS ACHIEVING. AND INCLUDING IT MEANT THAT THE TEXT ON A PAGE WOULD CENTRE IF THE TEXT DIDN'T FILL THE CONTAINER IT WAS IN.*/ 
   padding-top: 5em; /* Means that nothing will be obscured by the header */
   width: 100%;
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 310px);
 }
 
 /* BODY STYLES */
