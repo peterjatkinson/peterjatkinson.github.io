@@ -213,6 +213,50 @@ h1 {
   align-items: center;
 }
 
+/* CHAPTER STYLES */
+.chapter {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 960px;
+  margin: auto;
+  padding: 80px 3em 0 3em; /* Stops text and image from touching edges of window on right and left */
+}
+.chapter > h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 2em;
+  text-align: center;
+}
+.chapter > h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+.chapter > p {
+  text-indent: 30px;
+  margin-bottom: 20px;
+}
+h1 + .first-para-section {
+  text-indent: 0px;
+}
+h2 + .first-para-section {
+  text-indent: 0px;
+}
+h3 + .first-para-section {
+  text-indent: 0px;
+}
+h4 + .first-para-section {
+  text-indent: 0px;
+}
+blockquote {
+  display: inline-block;
+  margin-left: 30px;
+  color: #2a2a2e;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 /* COLUMN STYLES */
 .column-left {
   flex: 2; /* Makes this column twice the size of one on the right */
