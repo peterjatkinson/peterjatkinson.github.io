@@ -435,7 +435,10 @@ th:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 68px);
+  /* 68px is height of the header. I want it to fill the space below the header down to the bottom of the screen */
+  padding-top: 68px;
+  /* to push it below the header */
 }
 
 .grid-hero > * {
