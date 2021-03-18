@@ -339,7 +339,14 @@ h1 {
   opacity: 0.6;
 }
 
-
+/* IMAGES STYLE */
+.image-container {
+  text-align: center;
+}
+.image-container > img {
+  width: 100%;
+  max-width: 1000px;
+}
 /* TABLE STYLES */
 .table-container {
   overflow-x:auto;
