@@ -8,20 +8,27 @@
   /* display: flex;
   flex: 1 1 auto; 
   HAVE COMMENTED ABOVE OUT AS NOT SURE WHAT IT WAS ACHIEVING. AND INCLUDING IT MEANT THAT THE TEXT ON A PAGE WOULD CENTRE IF THE TEXT DIDN'T FILL THE CONTAINER IT WAS IN.*/ 
-  padding-top: 5em; /* Means that nothing will be obscured by the header */
+  /* padding-top: 5em; Means that nothing will be obscured by the header */
   width: 100%;
   min-height: calc(100vh - 310px);
   /* Min-height for sticky footer purposes. 310 is footer height. Does mean the footer has to stay same size, but I think it is doing that somehow, even on mobile view.  */
 }
 
+html {
+  font-family: 'EB Garamond', serif;
+
+}
 /* BODY STYLES */
 
 /* PARAGRAPH STYLES */
 
 
 /* HEADING STYLES */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+}
 h1 {
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 600;
@@ -31,7 +38,7 @@ h1 {
 
 /* HEADER STYLES */
 .header {
-  background-color: lightblue;
+  background-color: #77788c;
   padding: 1em;
   margin: 0 0 15px 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -49,13 +56,13 @@ h1 {
   padding: 0.15em 1.2em 0.2em; 
 }
 .header-nav > li ~ li {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid white;
 }
 .header-nav > li:last-of-type {
   padding: 0.15em 0.25em 0.2em 1.2em;
 }
 .header-nav a {
-  color: #000;
+  color: white;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -71,9 +78,9 @@ h1 {
 }
 
 .drop-menu {
-  background-color: lightblue;
+  background-color: #77788c;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0px 5px 20px lightblue;
+  box-shadow: 0px 5px 20px #77788c;
   display: none;
   padding: 15px 0 0 0;
   position: absolute;
@@ -82,7 +89,7 @@ h1 {
   list-style: none;
 }
 .drop-menu a {
-  color: rgb(56, 53, 53);
+  color: white;
   font-size: 0.9em;
   padding: 8px 16px;
   text-decoration: none;
@@ -101,9 +108,9 @@ h1 {
   display: inline-block;
 }
 .drop-menu-final {
-  background-color: lightblue;
+  background-color: #77788c;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0px 5px 20px lightblue;
+  box-shadow: 0px 5px 20px #77788c;
   display: none;
   padding: 15px 0 0 0;
   position: absolute;
@@ -112,7 +119,7 @@ h1 {
   list-style: none;
 }
 .drop-menu-final a {
-  color: rgb(56, 53, 53);
+  color: white;
   font-size: 0.9em;
   padding: 8px 16px;
   text-align: right;
@@ -129,7 +136,7 @@ h1 {
 
 /* FOOTER STYLES */
 .footer {
-  background-color: lightblue;
+  background-color: #77788c;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   width: 100%;
@@ -149,7 +156,7 @@ h1 {
   margin: 2em;
 }
 .footer-nav a {
-  color: #000;
+  color: white;
   font-weight: bold;
   text-decoration: none;
 }
@@ -161,6 +168,10 @@ h1 {
 }
 .footer-nav .dropdown-final:hover .drop-menu-final {
   display: none;
+}
+.copyright-line {
+  opacity: .7;
+  color: white;
 }
 /* MOBILE MENU */
 
@@ -178,7 +189,7 @@ h1 {
   line-height: 1.6;
   max-width: 960px;
   margin: auto;
-  padding: 0 3em 0 3em; /* Stops text and image from touching edges of window on right and left */
+  padding: 5em 3em 0 3em; /* Stops text and image from touching edges of window on right and left */
 }
 
 .homepage-flex {
@@ -327,6 +338,244 @@ h1 {
 #LondonB {
   opacity: 0.6;
 }
+
+
+/* TABLE STYLES */
+.table-container {
+  overflow-x:auto;
+  margin: 3em;
+  max-width: 2000px;
+}
+table {
+  margin: auto;
+  table-layout: fixed;
+  font-size: 1em;
+}
+table > caption {
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #2a2a2e;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+th {
+  font-weight: bold;
+  vertical-align: middle;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 90px;
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+th:hover {
+  opacity: .9;
+  cursor: pointer;
+}
+
+.sortable-table tr:nth-child(even) {
+  background-color: #babcdb;
+}
+.sortable-table tr:nth-child(odd) {
+ background-color: #fff;
+}
+.sortable-table th {
+  background-color: #2a2a2e;
+  color: white;
+}
+
+.sortable-table td:first-child {
+  background-color: #2a2a2e;
+  color: white;
+  font-weight: bold;
+}
+.sortable-table td:nth-child(2) {
+  background-color: #babcdb;
+  color: black;
+  font-weight: bold;
+}
+
+
+/* GRID STYLES */
+
+.grid-tiles a {
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+}
+
+.grid-tiles a:hover {
+  opacity: .85;
+}
+
+
+/* Styles for the hero image */
+.grid-hero {   
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Rhinegold_and_the_Valkyries_p_102.jpg/800px-Rhinegold_and_the_Valkyries_p_102.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid-hero > * {
+  color: white;
+}
+
+.grid-hero > h1 {
+  font-size: 4rem;
+  padding: 4rem;
+  background: #77788c;
+  opacity: 0.95;
+  text-align: center;
+}
+
+.grid-hero > article {
+  border-radius: 15px 0 0 15px;
+  background: #77788c;
+  opacity: 0.95;
+  padding: 1.4rem 2.5rem;
+}
+
+.grid-hero > article > p {
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  padding: 1rem;
+}
+
+.grid-hero:after {
+  bottom: 0vh;
+  border: 15px solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+
+
+/* Grid-tiles styles */
+.grid-tiles {
+  padding: 2rem;
+}
+
+.grid-tiles > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  list-style: none;
+}
+
+.grid-tiles > ul > li {
+  border-radius: 15px;
+  max-height: 270px;
+}
+
+.grid-tile {
+  color: white; 
+  min-height: 270px;
+  border-radius: 15px;
+  position: relative;
+}
+
+#preRaphaelitismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dante_Gabriel_Rossetti_-_Beata_Beatrix_-_Google_Art_Project.jpg/800px-Dante_Gabriel_Rossetti_-_Beata_Beatrix_-_Google_Art_Project.jpg); 
+  background-size: cover;
+}
+#celticismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/King_Arthurs_Domain%2C_Tintagel_%282174966665%29.jpg/1920px-King_Arthurs_Domain%2C_Tintagel_%282174966665%29.jpg);
+  background-size: cover;
+}
+#arthurianismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/4/41/The_Death_of_King_Arthur_by_James_Archer_%281860%29.jpg);
+  background-size: cover;
+}
+#mysticismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/88/Paradise_%28Paradiso%29_II.jpg);
+  background-size: cover;
+}
+#medievalismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/b/b0/Wagner_-_Die_Meistersinger_von_N%C3%BCrnberg%2C_act_I_-_Walter%27s_trial_-_The_Victrola_book_of_the_opera.jpg);
+  background-size: cover;
+}
+#theSeaTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Land%27s_End_%28Cornwall%2C_UK%29%2C_Coast_Path_--_2013_--_1061_--_2.jpg);
+  background-size: cover;
+}
+#theForestTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Rohlfs_-_Waldweben%2C_1895.jpeg/1024px-Rohlfs_-_Waldweben%2C_1895.jpeg);
+  background-size: cover;
+}
+#musicalWagnerismTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Wagner_Tristan_opening.png/1920px-Wagner_Tristan_opening.png) center;
+  background-size: cover;
+}
+#politicsTile {
+  background: url();
+  background-size: cover;
+}
+#RaceTile {
+  background: url();
+  background-size: cover;
+}
+
+.grid-tile > p {
+  border-radius: 15px;
+  opacity: 0;
+  line-height: 1.3em;
+  margin: 15px;
+  padding: 15px;
+  text-align: left;
+  background-color: #77788c;
+}
+.grid-tile:hover > p {
+  opacity: .9;
+  transition: all .7s;
+}
+
+
+
+.grid-tiles > ul > li > a > div > p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+  padding: .75rem;
+  color: white;
+}
+
+.grid-tiles > ul > li > a {
+  border-radius: 15px;
+}
+
+
+.grid-caption {
+  background-color: #77788c;
+  opacity: 0.9;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 0;
+}
+
+.grid-caption > h2 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
 
 /* TIMELINE STYLES */
 .timeline-container {
@@ -601,8 +850,31 @@ q {
     margin: 3vh;
     border: solid green 1px;
   }
-
-  
+  /* TABLE STYLES */
+  table {
+    font-size: 0.8em;
+  }
+  .table-container {
+    margin: 2em 1em;
+  }
+  /* GRID STYLES */
+  .grid-tile:hover > p {
+    opacity: 0;
+  }
+  .grid-tiles a:hover {
+    opacity: 1;
+  }
+  .grid-tiles a:active {
+    opacity: .45;
+    transition: all .1s;
+  }
+  .grid-hero > article {
+    border-radius: 0;  
+    padding: 1.4rem 1rem;
+  }
+  .grid-hero:after {
+    border: 0px solid;
+  }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
     width: 100%;
