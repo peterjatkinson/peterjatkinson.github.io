@@ -13,6 +13,9 @@
   width: 100%;
   min-height: calc(100vh - 230px);
   /* Min-height for sticky footer purposes. 310 is footer height. Does mean the footer has to stay same size, but I think it is doing that somehow, even on mobile view. Minus 80px which is the padding at the top of the homepage-intro class. May have to think of a more effective way of doing this? */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
 }
 
 html {
@@ -216,25 +219,28 @@ h1 {
 /* CHAPTER STYLES */
 .chapter {
   font-family: 'EB Garamond', serif;
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: 400;
-  line-height: 1.6;
-  max-width: 960px;
+  line-height: 1.8em;
+  max-width: 750px;
   margin: auto;
-  padding: 80px 3em 0 3em; /* Stops text and image from touching edges of window on right and left */
+  padding: 110px 3em 25px; 3em; /* Stops text and image from touching edges of window on right and left */
 }
 .chapter > h1 {
   font-family: 'Markazi Text', serif;
   font-size: 2em;
   text-align: center;
+  margin-bottom: 25px;
 }
 .chapter > h2 {
   font-family: 'Markazi Text', serif;
   font-size: 1.5em;
   text-align: left;
+  margin-bottom: 20px;
+
 }
 .chapter > p {
-  text-indent: 30px;
+  text-indent: 40px;
   margin-bottom: 20px;
 }
 h1 + .first-para-section {
@@ -251,11 +257,18 @@ h4 + .first-para-section {
 }
 blockquote {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 40px;
   color: #2a2a2e;
   margin-top: 10px;
   margin-bottom: 30px;
+  font-size: .9em;
 }
+/* Footnote styles */
+[id^="_ftnref"] {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+
 
 /* COLUMN STYLES */
 .column-left {
@@ -947,6 +960,10 @@ q {
   }
   .grid-hero:after {
     border: 0px solid;
+  }
+  /* CHAPTER STYLES */
+  .chapter {
+    padding: 100px 10px 40px;
   }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
