@@ -964,6 +964,8 @@ q {
   /* CHAPTER STYLES */
   .chapter {
     padding: 100px 10px 40px;
+    font-size: 1.15em;
+    line-height: 1.6em;
   }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
