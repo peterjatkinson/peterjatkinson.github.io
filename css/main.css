@@ -15,11 +15,13 @@
   /* Min-height for sticky footer purposes. 310 is footer height. Does mean the footer has to stay same size, but I think it is doing that somehow, even on mobile view. Minus 80px which is the padding at the top of the homepage-intro class. May have to think of a more effective way of doing this? */
   overflow-wrap: break-word;
   word-wrap: break-word;
+  /* Two above so links in footnotes don't force the screen to widen */
 
 }
 
 html {
   font-family: 'EB Garamond', serif;
+  scroll-padding-top: 68px; /* height of sticky header. Means on-page links will go to correct place. */
 
 }
 /* BODY STYLES */
@@ -153,6 +155,12 @@ h1 {
   display: block;
 }
 
+/* Menu disappear down scroll */
+.hide {
+  display: none;
+}
+
+
 /* FOOTER STYLES */
 .footer {
   background-color: #77788c;
@@ -240,7 +248,7 @@ h1 {
 
 }
 .chapter > p {
-  text-indent: 40px;
+  text-indent: 2.5em;
   margin-bottom: 20px;
 }
 h1 + .first-para-section {
@@ -966,6 +974,9 @@ q {
     padding: 100px 10px 40px;
     font-size: 1.15em;
     line-height: 1.5em;
+  }
+  .chapter > p {
+    text-indent: 0;
   }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {

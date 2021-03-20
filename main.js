@@ -38,6 +38,62 @@ $(document).ready(function(){
     $(".tab-button").fadeTo("fast", 1);
     $("#TokyoB").fadeTo(1, 0.6);
   });
+
+
+  
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 50;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the header, add class .header.
+    // This is necessary so you never see what is "behind" the header.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('header').addClass('hide');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('hide').addClass('header');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+ 
+ 
+ 
+ 
+  // //This ONE WORKS BUT NOT RIGHT
+  // var header = $(".header");
+  // $(window).scroll(function() {
+  //     var scroll = $(window).scrollTop();
+
+  //     if (scroll >= 500) {
+  //         header.removeClass('header').addClass("hide");
+  //     } else {
+  //         header.removeClass("hide").addClass('header');
+  //     }
+  // });
 });
 
 
