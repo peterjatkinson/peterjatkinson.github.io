@@ -224,7 +224,7 @@ h1 {
   line-height: 1.8em;
   max-width: 750px;
   margin: auto;
-  padding: 110px 3em 25px; 3em; /* Stops text and image from touching edges of window on right and left */
+  padding: 110px 3em 25px 3em; /* Stops text and image from touching edges of window on right and left */
 }
 .chapter > h1 {
   font-family: 'Markazi Text', serif;
@@ -965,7 +965,7 @@ q {
   .chapter {
     padding: 100px 10px 40px;
     font-size: 1.15em;
-    line-height: 1.6em;
+    line-height: 1.5em;
   }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
