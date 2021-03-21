@@ -232,7 +232,7 @@ h1 {
   line-height: 1.8em;
   max-width: 750px;
   margin: auto;
-  padding: 110px 3em 25px 3em; /* Stops text and image from touching edges of window on right and left */
+  padding: 50px 3em 25px 3em; /* Stops text and image from touching edges of window on right and left */
 }
 .chapter > h1 {
   font-family: 'Markazi Text', serif;
@@ -271,13 +271,39 @@ blockquote {
   margin-bottom: 30px;
   font-size: .9em;
 }
+.first-character {
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
 /* Footnote styles */
 [id^="_ftnref"] {
   vertical-align: top;
   font-size: 0.5em;
- 
 }
-
+/* BOX STYLES */
+.box {
+  margin: 30px 0;
+  background: #babcdb;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid black;
+  font-size: .95em;
+}
+.box > p {
+  margin-top: 15px;
+  text-indent: 40px;
+}
+.box-heading {
+  font-size: 1.4em;
+}
+.box-heading + p {
+  text-indent: 0;
+}
 
 /* COLUMN STYLES */
 .column-left {
@@ -511,6 +537,95 @@ th:hover {
 }
 
 
+
+
+/* STANDARD HERO */
+.hero {
+  align-items: center;
+  min-height: calc(100vh - 68px);
+  /* 68px is height of the header. I want it to fill the space below the header down to the bottom of the screen */
+  padding-top: 68px;
+  /* to push it below the header */
+}
+
+
+/* Styles for the hero sections (specific background images with IDs also below */
+.grid-hero {   
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: center;
+  min-height: calc(100vh - 68px);
+  /* 68px is height of the header. I want it to fill the space below the header down to the bottom of the screen */
+  padding-top: 68px;
+  /* to push it below the header */
+}
+#themes {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Rhinegold_and_the_Valkyries_p_102.jpg/800px-Rhinegold_and_the_Valkyries_p_102.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#introduction {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rhinegold_and_the_Valkyries_p_004.jpg/800px-Rhinegold_and_the_Valkyries_p_004.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding: 4rem;
+  background: #77788c;
+  opacity: 0.95;
+  text-align: center;
+  /* margin-top: calc(50vh - 230px); */
+}
+
+.hero > article {
+  border-radius: 15px 0 0 15px;
+  background: #77788c;
+  opacity: 0.95;
+  padding: 1.4rem 2.5rem;
+}
+
+.epigraph {
+  font-style: italic;
+  max-width: 75%;
+  text-align: center;
+  margin: auto;
+  border-radius: 15px !important;
+}
+
+.epigraph-author {
+  text-align: right;
+  font-size: .8em;
+  font-style: normal;
+}
+.hero > article > p {
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  padding: 1rem;
+}
+
+.hero:after {
+  bottom: 0vh;
+  border: 15px solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+
+
 /* GRID STYLES */
 
 .grid-tiles a {
@@ -526,62 +641,6 @@ th:hover {
   opacity: .85;
 }
 
-
-/* Styles for the hero image */
-.grid-hero {   
-  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Rhinegold_and_the_Valkyries_p_102.jpg/800px-Rhinegold_and_the_Valkyries_p_102.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  align-items: center;
-  min-height: calc(100vh - 68px);
-  /* 68px is height of the header. I want it to fill the space below the header down to the bottom of the screen */
-  padding-top: 68px;
-  /* to push it below the header */
-}
-
-.grid-hero > * {
-  color: white;
-}
-
-.grid-hero > h1 {
-  font-size: 4rem;
-  padding: 4rem;
-  background: #77788c;
-  opacity: 0.95;
-  text-align: center;
-}
-
-.grid-hero > article {
-  border-radius: 15px 0 0 15px;
-  background: #77788c;
-  opacity: 0.95;
-  padding: 1.4rem 2.5rem;
-}
-
-.grid-hero > article > p {
-  font-size: 1.5rem;
-  line-height: 1.2em;
-  padding: 1rem;
-}
-
-.grid-hero:after {
-  bottom: 0vh;
-  border: 15px solid;
-  border-color: #fff transparent transparent;
-  content: "";
-  height: 0;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, 0);
-  width: 0;
-}
-
-
-/* Grid-tiles styles */
 .grid-tiles {
   padding: 2rem;
 }
@@ -984,12 +1043,20 @@ q {
     opacity: .45;
     transition: all .1s;
   }
-  .grid-hero > article {
+  .hero > article {
     border-radius: 0;  
     padding: 1.4rem 1rem;
   }
-  .grid-hero:after {
+  .epigraph {
+    border-radius: 15px !important;
+  }
+  
+  .hero:after {
     border: 0px solid;
+  }
+  .hero > h1 {
+    font-size: 3em;
+    padding: 0;
   }
   /* CHAPTER STYLES */
   .chapter {
@@ -998,6 +1065,9 @@ q {
     line-height: 1.5em;
   }
   .chapter > p {
+    text-indent: 0;
+  }
+  .box > p {
     text-indent: 0;
   }
   .image-container > img {
