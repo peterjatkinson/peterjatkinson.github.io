@@ -41,24 +41,24 @@ $(document).ready(function(){
 
 
   
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 50;
-var navbarHeight = $('header').outerHeight();
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 50;
+  var navbarHeight = $('header').outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
 
-function hasScrolled() {
+  function hasScrolled() {
     var st = $(this).scrollTop();
     
     // Make sure they scroll more than delta
@@ -78,9 +78,8 @@ function hasScrolled() {
     }
     
     lastScrollTop = st;
-}
- 
- 
+  }
+
  
  
   // //This ONE WORKS BUT NOT RIGHT
@@ -95,6 +94,30 @@ function hasScrolled() {
   //     }
   // });
 });
+
+
+// FUNCTION FOR IMAGE FADE IN
+function showImages(el) {
+  var windowHeight = jQuery( window ).height();
+  $(el).each(function(){
+      var thisPos = $(this).offset().top;
+
+      var topOfWindow = $(window).scrollTop();
+      if (topOfWindow + windowHeight - 200 > thisPos ) {
+          $(this).addClass("fadeIn");
+      }
+  });
+}
+// if the image in the window of browser when the page is loaded, show that image
+$(document).ready(function(){
+  showImages('.fade-image');
+});
+
+// if the image in the window of browser when scrolling the page, show that image
+$(window).scroll(function() {
+  showImages('.fade-image');
+});
+
 
 
 // CAROUSEL/SLIDESHOW FUNCTIONS
@@ -184,4 +207,8 @@ function sortTable(n) {
     }
   }
 }
+
+
+
+
 

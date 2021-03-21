@@ -21,7 +21,7 @@
 
 html {
   font-family: 'EB Garamond', serif;
-  scroll-padding-top: 68px; /* height of sticky header. Means on-page links will go to correct place. */
+  scroll-padding-top: 75px; /* height of sticky header plus a little more. Means on-page links will go to correct place. */
 
 }
 /* BODY STYLES */
@@ -238,7 +238,7 @@ h1 {
   font-family: 'Markazi Text', serif;
   font-size: 2em;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .chapter > h2 {
   font-family: 'Markazi Text', serif;
@@ -248,7 +248,7 @@ h1 {
 
 }
 .chapter > p {
-  text-indent: 2.5em;
+  text-indent: 40px;
   margin-bottom: 20px;
 }
 h1 + .first-para-section {
@@ -273,8 +273,9 @@ blockquote {
 }
 /* Footnote styles */
 [id^="_ftnref"] {
-  vertical-align: super;
+  vertical-align: top;
   font-size: 0.5em;
+ 
 }
 
 
@@ -314,6 +315,11 @@ blockquote {
 }
 
 
+
+
+
+    
+  
 /* ESSAY PAGES AND CONTENT TOGGLING */
 .answer-page {
   align-items: center;
@@ -428,6 +434,22 @@ blockquote {
   width: 100%;
   max-width: 750px;
 }
+.fade-image {
+  visibility: hidden;
+}
+/* IMAGE FADE-IN STYLES. Goes with JS function */
+
+.fadeIn {
+  -webkit-animation: animat_show 0.8s;
+  animation: animat_show 0.5s;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show {
+  0%{opacity:0};
+  100%{opacity:1};
+}
+
 /* TABLE STYLES */
 .table-container {
   overflow-x:auto;
@@ -977,6 +999,9 @@ q {
   }
   .chapter > p {
     text-indent: 0;
+  }
+  .image-container > img {
+    max-width: 95vw;
   }
   /* OVERLAY NOT WORKING - So you can click off anywhere outside of the menu to remove it once it comes up*/
   /* .mobile-menu-close {
