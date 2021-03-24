@@ -271,7 +271,7 @@ blockquote {
   margin-bottom: 30px;
   font-size: .9em;
 }
-.first-character {
+.dropcap:first-letter {
   float: left;
   font-size: 75px;
   line-height: 60px;
@@ -586,14 +586,19 @@ th:hover {
   text-align: center;
   /* margin-top: calc(50vh - 230px); */
 }
-
+.hero > .non-grid-header {
+  transform: translate(0, 10vh);
+}
 .hero > article {
   border-radius: 15px 0 0 15px;
   background: #77788c;
   opacity: 0.95;
   padding: 1.4rem 2.5rem;
 }
-
+.hero > .non-grid-article {
+  transform: translate(0, 25vh);
+  max-width: 30%;
+}
 .epigraph {
   font-style: italic;
   max-width: 75%;
@@ -1043,9 +1048,20 @@ q {
     opacity: .45;
     transition: all .1s;
   }
+  .hero > h1 {
+    font-size: 3em;
+    padding: 0;
+  }
+  .hero > .non-grid-header {
+    transform: translate(0, 5vh);
+  }
   .hero > article {
     border-radius: 0;  
     padding: 1.4rem 1rem;
+  }
+  .hero > .non-grid-article {
+    transform: translate(0, 5vh);
+    max-width: 80%;
   }
   .epigraph {
     border-radius: 15px !important;
@@ -1054,9 +1070,11 @@ q {
   .hero:after {
     border: 0px solid;
   }
-  .hero > h1 {
-    font-size: 3em;
-    padding: 0;
+  #themes {
+    background-attachment: initial;
+  }
+  #introduction {
+    background-attachment: initial;
   }
   /* CHAPTER STYLES */
   .chapter {
