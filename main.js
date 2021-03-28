@@ -42,6 +42,10 @@ $(document).ready(function(){
     $(".tab-button").fadeTo("fast", 1);
     $("#TokyoB").fadeTo(1, 0.6);
   });
+  // MOBILE HEADER TOGGLE
+  $(".hamburger").click(function() {
+    $(".header-nav").slideToggle(400);
+  })
 
 
     
