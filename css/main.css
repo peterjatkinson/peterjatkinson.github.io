@@ -1005,7 +1005,6 @@ q {
     /* Removed transition from here and placed below to fix problem of old menu showing when you close it */
   }
   .mobile-menu-check:checked ~ .header-nav {
-    /* min-height: 0vh; */
     max-height: 90vh; 
     /* Has to be less than the content takes up for scrolling the navbar separately to work. If 100vh you can't scroll for some reason */
     float: none;  /* makes lis go from right to left, stops skewing to one side */

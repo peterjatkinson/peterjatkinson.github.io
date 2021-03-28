@@ -44,49 +44,51 @@ $(document).ready(function(){
   });
 
 
-  
-  // Hide Header on on scroll down
-  if ($(window).width() < 800) {
-    // Above line so only runs on smaller devices.
+    
 
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 50;
-    var navbarHeight = $('header').outerHeight();
+  // DISABLED BELOW FOR NOW AS MAKING THINGS TOO COMPLICATED WITH MOBILE HEADER
+  // // Hide Header on on scroll down
+  // if ($(window).width() < 800) {
+  //   // Above line so only runs on smaller devices.
 
-    $(window).scroll(function(event){
-        didScroll = true;
-    });               
+  //   var didScroll;
+  //   var lastScrollTop = 0;
+  //   var delta = 50;
+  //   var navbarHeight = $('header').outerHeight();
 
-    setInterval(function() {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 250);
+  //   $(window).scroll(function(event){
+  //       didScroll = true;
+  //   });               
 
-    function hasScrolled() {
-      var st = $(this).scrollTop();
+  //   setInterval(function() {
+  //       if (didScroll) {
+  //           hasScrolled();
+  //           didScroll = false;
+  //       }
+  //   }, 250);
+
+  //   function hasScrolled() {
+  //     var st = $(this).scrollTop();
       
-      // Make sure they scroll more than delta
-      if(Math.abs(lastScrollTop - st) <= delta)
-          return;
+  //     // Make sure they scroll more than delta
+  //     if(Math.abs(lastScrollTop - st) <= delta)
+  //         return;
       
-      // If they scrolled down and are past the header, add class .header.
-      // This is necessary so you never see what is "behind" the header.
-      if (st > lastScrollTop && st > navbarHeight){
-          // Scroll Down
-          $('header').removeClass('header').addClass('hide');
-      } else {
-          // Scroll Up
-          if(st + $(window).height() < $(document).height()) {
-              $('header').removeClass('hide').addClass('header');
-          }
-      }
+  //     // If they scrolled down and are past the header, add class .header.
+  //     // This is necessary so you never see what is "behind" the header.
+  //     if (st > lastScrollTop && st > navbarHeight){
+  //         // Scroll Down
+  //         $('header').removeClass('header').addClass('hide');
+  //     } else {
+  //         // Scroll Up
+  //         if(st + $(window).height() < $(document).height()) {
+  //             $('header').removeClass('hide').addClass('header');
+  //         }
+  //     }
       
-      lastScrollTop = st;
-    }
-  }
+  //     lastScrollTop = st;
+  //   }
+  // }
  
  
   // //This ONE WORKS BUT NOT RIGHT
@@ -101,6 +103,7 @@ $(document).ready(function(){
   //     }
   // });
 });
+
 
 
 // FUNCTION FOR IMAGE FADE IN
