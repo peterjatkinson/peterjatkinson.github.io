@@ -988,6 +988,7 @@ q {
     display: inline-block;
   }
   /* MOBILE MENU */
+  
   .show-mobile-menu {
     display: block;
     float: right;
@@ -1014,12 +1015,80 @@ q {
     display: block;
     border-left: 0;
     padding: 1em 0;
-    border-top: 1px dashed black;
+    border-top: solid white 2px;
   }
+  /* MOBILE SUB-NAV LINKS STYLES */
+
   .dropdown:hover .drop-menu {
-    display: none;
-    /* Stops drop menu from appearing in mobile. Assumes only want main menu headers for the mobile version of the menu. Alternatively get rid of this and work out how to create sub-dropdowns (depends if there's a main page before the subdrop downs, e.g. main UK page, then separate Essay and Source pages, etc. */
+    /* display: none; */
+    /* Stops drop menu from appearing in mobile. Assumes only want main menu headers for the mobile version of the menu. Alternative re-styling for mobile so they do display below */
   }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .drop-menu {
+    background-color: #77788c;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 5px 20px #77788c;
+    display: block;
+    padding: 15px 0 0 0;
+    position: relative;
+    margin: 0 -16px; 
+    min-width: 160px; 
+    list-style: none;
+  }
+  .drop-menu a {
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .drop-menu > li > a {
+    text-transform: capitalize;
+  }
+  .drop-menu li:first-of-type {
+    border-top: 1px dashed black;
+    margin-top: 5px;
+    padding: 10px 0 0 0;
+  }
+  
+  
+  .dropdown-final {
+    position: relative;
+    display: inline-block;
+  }
+  .drop-menu-final {
+    background-color: #77788c;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 5px 20px #77788c;
+    display: block;
+    padding: 15px 0 0 0;
+    position: relative;
+    margin: 0 -16px; 
+    min-width: 160px; 
+    list-style: none;
+  }
+  .drop-menu-final a {
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  .drop-menu-final > li > a {
+    text-transform: capitalize;
+  }
+  .drop-menu-final li:first-of-type {
+    border-top: 1px dashed black;
+    margin-top: 5px;
+    padding: 10px 0 0 0;
+  }
+  
+
 
   /* HAMBURGER AND TRANSITION STYLES */
   .hamburger {
