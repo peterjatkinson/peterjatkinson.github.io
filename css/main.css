@@ -1019,10 +1019,7 @@ q {
   }
   /* MOBILE SUB-NAV LINKS STYLES */
 
-  .dropdown:hover .drop-menu {
-    /* display: none; */
-    /* Stops drop menu from appearing in mobile. Assumes only want main menu headers for the mobile version of the menu. Alternative re-styling for mobile so they do display below */
-  }
+  
   .dropdown {
     position: relative;
     display: inline-block;
@@ -1088,7 +1085,13 @@ q {
     padding: 10px 0 0 0;
   }
   
+  .footer-nav > .dropdown > .drop-menu {
+    display: none;
+  }
 
+  .footer-nav > .dropdown-final > .drop-menu-final {
+    display: none;
+  }
 
   /* HAMBURGER AND TRANSITION STYLES */
   .hamburger {
