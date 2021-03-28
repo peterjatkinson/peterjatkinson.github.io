@@ -701,6 +701,10 @@ th:hover {
   background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Wagner_Tristan_opening.png/1920px-Wagner_Tristan_opening.png) center;
   background-size: cover;
 }
+#fusionTile {
+  background: url();
+  background-size: cover;
+}
 #politicsTile {
   background: url();
   background-size: cover;
@@ -882,6 +886,8 @@ th:hover {
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -986,7 +992,6 @@ q {
     display: block;
     float: right;
     font-weight: bold;
-    margin-top: 3vh;
     padding: 1.5vh;
     position: relative;
     text-transform: uppercase;
@@ -999,7 +1004,7 @@ q {
     /* Removed transition from here and placed below to fix problem of old menu showing when you close it */
   }
   .mobile-menu-check:checked ~ .header-nav {
-    max-height: 300px;
+    min-height: 100vh; /* but still issue that if you scroll down it makes the menu disappear - could just get rid of that, or find a way to disable when this is checked? */
     float: none;  /* makes lis go from right to left, stops skewing to one side */
     width: 100%;  /* Moves the menu below the menu text rather than to the side */
     text-align: center; /* Centers text */
@@ -1014,6 +1019,30 @@ q {
   .dropdown:hover .drop-menu {
     display: none;
     /* Stops drop menu from appearing in mobile. Assumes only want main menu headers for the mobile version of the menu. Alternatively get rid of this and work out how to create sub-dropdowns (depends if there's a main page before the subdrop downs, e.g. main UK page, then separate Essay and Source pages, etc. */
+  }
+
+  /* HAMBURGER AND TRANSITION STYLES */
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .hamburger-to-x .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .hamburger-to-x .bar2 {
+    opacity: 0;
+  }
+  .hamburger-to-x .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 
   /* MOBILE MAPHUB STYLES */

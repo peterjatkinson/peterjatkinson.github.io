@@ -17,6 +17,10 @@ function openCity(cityName) {
   //So if you click on the 'London' button, the click triggers the openCity function and passes 'London' as the argument. And then the getElementById picks up the ID London because, I think, the argument given and the ID of that div are the same. I think that's everything...
 }
 
+function hamburger(x) {
+  x.classList.toggle("hamburger-to-x");
+}
+
 
 //  Tabs with jquery
 $(document).ready(function(){

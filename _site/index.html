@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <title>Test Page: Don't Panic</title>
+  <meta charset="utf-8">
+  <title>British Music and Wagnerism</title>
   <!-- Titles and page descriptions with Liquid
     
       <title>Test Page: Don't Panic</title>
@@ -10,7 +11,6 @@
       <meta name="description" content="This is a dangerous site.">
      
   -->
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
@@ -52,10 +52,16 @@
     <header class="header">
   <nav>
     <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
-    <!-- <label for="mobile-menu" class="mobile-menu-close"></label> -->
-    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
+    <label for="mobile-menu" class="show-mobile-menu">
+      <div class="hamburger" onclick="hamburger(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </label>
     <ul class="header-nav">
       <li><a href="/">Home</a></li>
+<!--  -->
 <li class="dropdown">
   <a class="drop-trigger" href="#">UK</a>
   <ul class="drop-menu">
@@ -169,6 +175,7 @@
     <br>
     <ul class="footer-nav">
       <li><a href="/">Home</a></li>
+<!--  -->
 <li class="dropdown">
   <a class="drop-trigger" href="#">UK</a>
   <ul class="drop-menu">
