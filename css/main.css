@@ -1000,12 +1000,14 @@ q {
   }
   .header-nav {
     max-height: 0;
-    overflow: hidden;
+    overflow-y: scroll;
     padding: 0;
     /* Removed transition from here and placed below to fix problem of old menu showing when you close it */
   }
   .mobile-menu-check:checked ~ .header-nav {
-    min-height: 100vh; /* but still issue that if you scroll down it makes the menu disappear - could just get rid of that, or find a way to disable when this is checked? */
+    /* min-height: 0vh; */
+    max-height: 90vh; 
+    /* Has to be less than the content takes up for scrolling the navbar separately to work. If 100vh you can't scroll for some reason */
     float: none;  /* makes lis go from right to left, stops skewing to one side */
     width: 100%;  /* Moves the menu below the menu text rather than to the side */
     text-align: center; /* Centers text */
