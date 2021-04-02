@@ -45,8 +45,10 @@ $(document).ready(function(){
   // MOBILE HEADER TOGGLE
   $(".hamburger").click(function() {
     $(".header-nav").slideToggle(400);
-  })
-
+  });
+  $(".drop-trigger").click(function() {
+    $(".mobile-click-drop").slideToggle(400);
+  });
 
     
 

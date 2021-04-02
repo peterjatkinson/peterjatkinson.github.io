@@ -1050,7 +1050,7 @@ q {
     background-color: #77788c;
     border-radius: 0;
     box-shadow: 0;
-    display: block;
+    display: none;
     padding: 0 0 0 0;
     position: relative;
     margin: 0; 
@@ -1073,11 +1073,14 @@ q {
     padding: 10px 0 0 0;
   }
   
-  
+  .header-nav > li:last-of-type {
+    padding: 15px 0;
+  }
   .dropdown-final {
-    border: solid red 2px;
+    /* border: solid red 2px; */
     margin: 0;
     padding: 0;
+    position: relative;
   }
   .drop-menu-final {
     background-color: #77788c;
@@ -1089,7 +1092,7 @@ q {
     margin: 0 0 0 0; 
     min-width: 160px; 
     list-style: none; 
-    border: solid blue 3px;
+    /* border: solid blue 3px; */
   }
   .drop-menu-final a {
     color: white;
@@ -1099,7 +1102,7 @@ q {
     display: block;
     text-align: center;
     margin: 0;
-    border: solid green 1px;
+    /* border: solid green 1px; */
   }
   .drop-menu-final > li > a {
     text-transform: capitalize;
