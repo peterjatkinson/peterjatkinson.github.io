@@ -1001,7 +1001,7 @@ q {
 
   .header-nav {
     display: none;
-    max-height: 90vh;
+    max-height: 100vh;
     overflow-y: scroll;
     padding: 0;
     float: none;  
