@@ -1001,7 +1001,7 @@ q {
 
   .header-nav {
     display: none;
-    max-height: 100vh;
+    max-height: 90vh;
     overflow-y: scroll;
     padding: 0;
     float: none;  
@@ -1075,26 +1075,31 @@ q {
   
   
   .dropdown-final {
-    position: relative;
-    display: inline-block;
+    border: solid red 2px;
+    margin: 0;
+    padding: 0;
   }
   .drop-menu-final {
     background-color: #77788c;
     border-radius: 0;
+    box-shadow: 0;
     display: block;
-    padding: 15px 0 0 0;
+    padding: 0 0 0 0;
     position: relative;
-    margin: 0; 
+    margin: 0 0 0 0; 
     min-width: 160px; 
-    list-style: none;
+    list-style: none; 
+    border: solid blue 3px;
   }
   .drop-menu-final a {
     color: white;
     font-size: 0.9em;
     padding: 8px 16px;
-    text-align: center;
     text-decoration: none;
     display: block;
+    text-align: center;
+    margin: 0;
+    border: solid green 1px;
   }
   .drop-menu-final > li > a {
     text-transform: capitalize;
