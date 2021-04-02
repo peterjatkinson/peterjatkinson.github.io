@@ -47,7 +47,15 @@ $(document).ready(function(){
     $(".header-nav").slideToggle(400);
   });
   $(".drop-trigger").click(function() {
-    $(".mobile-click-drop").slideToggle(400);
+    // var clicks = $(this).data('clicks');
+    // if (clicks) {
+    //   $(".drop-menu").css("display", "none");
+    // }
+    // else {
+    //   $(".drop-menu").css("display", "block");
+    // }
+    // $(this).data("clicks", !clicks);
+    $(".drop-menu").slideToggle(400);
   });
 
     
