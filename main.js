@@ -46,17 +46,20 @@ $(document).ready(function(){
   $(".hamburger").click(function() {
     $(".header-nav").slideToggle(400);
   });
-  $(".drop-trigger").click(function() {
-    // var clicks = $(this).data('clicks');
-    // if (clicks) {
-    //   $(".drop-menu").css("display", "none");
-    // }
-    // else {
-    //   $(".drop-menu").css("display", "block");
-    // }
-    // $(this).data("clicks", !clicks);
-    $(this).next().slideToggle(400);
-  });
+  // Drop down for sub-menus on mobile, only to function on screens les than 800px wide
+  if ($(window).width() < 800) {
+    $(".drop-trigger").click(function() {
+      // var clicks = $(this).data('clicks');
+      // if (clicks) {
+      //   $(".drop-menu").css("display", "none");
+      // }
+      // else {
+      //   $(".drop-menu").css("display", "block");
+      // }
+      // $(this).data("clicks", !clicks);
+      $(this).next().slideToggle(400);
+    });
+  };
 
     
 
