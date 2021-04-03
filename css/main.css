@@ -1040,7 +1040,10 @@ q {
   } */
   /* MOBILE SUB-NAV LINKS STYLES */
 
-  
+  .dropdown:hover .drop-menu {
+    display: none;
+  }
+
   .dropdown {
     position: relative;
     display: inline-block;
@@ -1082,11 +1085,14 @@ q {
     padding: 0;
     position: relative;
   }
+  .dropdown-final:hover .drop-menu-final {
+    display: none;
+  }
   .drop-menu-final {
     background-color: #77788c;
     border-radius: 0;
     box-shadow: 0;
-    display: block;
+    display: none;
     padding: 0 0 0 0;
     position: relative;
     margin: 0 0 0 0; 
@@ -1121,7 +1127,7 @@ q {
     display: none;
   }
 
-  /* HAMBURGER AND TRANSITION STYLES */
+  /* HAMBURGER AND TRANSITION STYLES. */
   .hamburger {
     display: inline-block;
     cursor: pointer;
