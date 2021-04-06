@@ -992,8 +992,7 @@ q {
     width: 100px;
   }
   .header-icon {
-    /* display: none; */
-    margin: 1em 0 0 1em;
+    display: none;
   }   /* don't display header icon in mobile view */
   .answer-commentary {
     display: inline-block;
