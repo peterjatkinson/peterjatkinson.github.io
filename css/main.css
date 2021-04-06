@@ -11,7 +11,7 @@
   /* padding-top: 5em;  */
   /* Means that nothing will be obscured by the header */
   width: 100%;
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 190px);
   /* Min-height for sticky footer purposes. 310 is footer height. Does mean the footer has to stay same size, but I think it is doing that somehow, even on mobile view. Minus 80px which is the padding at the top of the homepage-intro class. May have to think of a more effective way of doing this? */
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -97,7 +97,9 @@ h1 {
   position: relative;
   display: inline-block;
 }
-
+.drop-trigger {
+  cursor: default;
+}
 .drop-menu {
   background-color: #77788c;
   border-bottom: solid white 1px;
@@ -173,6 +175,13 @@ h1 {
 }
 .inside-footer {
   padding: 1em;
+}
+.footer-title {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 .footer-nav {
   display: inline-block;
@@ -334,7 +343,7 @@ blockquote {
 }
 .footer-icon {
   height: 100px;
-  width: 34px;
+  width: 100px;
 }
 .header-icon {
   height: 34px;
@@ -983,7 +992,8 @@ q {
     width: 100px;
   }
   .header-icon {
-    display: none;
+    /* display: none; */
+    margin: 1em 0 0 1em;
   }   /* don't display header icon in mobile view */
   .answer-commentary {
     display: inline-block;
@@ -1078,7 +1088,7 @@ q {
   }
   .drop-menu li:first-of-type {
     border-top: 1px dashed black;
-    margin-top: 5px;
+    margin-top: 15px;
     padding: 10px 0 0 0;
   }
   
@@ -1125,7 +1135,7 @@ q {
   }
   .drop-menu-final li:first-of-type {
     border-top: 1px dashed black;
-    margin-top: 5px;
+    margin-top: 15px;
     padding: 10px 0 0 0;
   }
   
