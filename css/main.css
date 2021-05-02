@@ -476,9 +476,21 @@ blockquote {
   opacity: 0.6;
 }
 
+/* SUPERSCRIPT */
+sup {
+  vertical-align: super;
+  font-size: .7em;
+}
+/* EDITING COMMENT */
+.comment {
+  color: orange;
+  font-style: italic;
+}
+
 /* IMAGE STYLES */
 .image-container {
   text-align: center;
+  margin-bottom: 20px;
 }
 .image-container > img {
   width: 100%;
@@ -597,7 +609,13 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+#chapter1 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Henry_Treffry_Dunn_%281838-1899%29_-_Sir_Launcelot_in_the_Queen%27s_Chamber_%28after_Dante_Gabriel_Rossetti%29_-_1288987_-_National_Trust.jpg);
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero > * {
   color: white;
 }
@@ -1251,6 +1269,9 @@ q {
     background-attachment: initial;
   }
   #introduction {
+    background-attachment: initial;
+  }
+  #chapter1 {
     background-attachment: initial;
   }
   /* CHAPTER STYLES */
