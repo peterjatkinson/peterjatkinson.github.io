@@ -53,7 +53,7 @@ h1 {
   z-index: 99999; /* Stops transparent elements apearing on top of the header when you scroll through a page */
 }
 .header-title {
-  margin: 0 0 0 20vh;
+  margin: 0 0 0 50px;
   font-size: 2em;
   text-decoration: none;
 }
