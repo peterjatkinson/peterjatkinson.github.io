@@ -625,6 +625,20 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#chapter2 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Wagner_-_Parsifal_-_The_temple_of_the_gral_-_Pach_Brothers_-_The_Victrola_book_of_the_opera.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#chapter3 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/c/cf/Dante_Gabriel_Rossetti_-_Beata_Beatrix%2C_1864-1870.jpg);
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero > * {
   color: white;
 }
@@ -699,6 +713,8 @@ th:hover {
 
 .grid-tiles {
   padding: 2rem;
+  max-width: 75%;
+  margin: auto;
 }
 
 .grid-tiles > ul {
@@ -762,6 +778,11 @@ th:hover {
 }
 #RaceTile {
   background: url();
+  background-size: cover;
+}
+
+#introductionTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rhinegold_and_the_Valkyries_p_004.jpg/800px-Rhinegold_and_the_Valkyries_p_004.jpg);
   background-size: cover;
 }
 
@@ -1242,6 +1263,9 @@ q {
     margin: 2em 1em;
   }
   /* GRID STYLES */
+  .grid-tiles {
+    margin: 0;
+  }
   .grid-tile:hover > p {
     opacity: 0;
   }
@@ -1281,6 +1305,12 @@ q {
     background-attachment: initial;
   }
   #chapter1 {
+    background-attachment: initial;
+  }
+  #chapter2 {
+    background-attachment: initial;
+  }
+  #chapter3 {
     background-attachment: initial;
   }
   /* CHAPTER STYLES */
