@@ -501,10 +501,12 @@ sup {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .image-container > img {
   width: 100%;
   max-width: 750px;
 }
+
 .fade-image {
   visibility: hidden;
 }
@@ -931,16 +933,25 @@ th:hover {
 }
 
 /* SLIDESHOW/CAROUSEL STYLES */
+
+.image-container-carousel {
+  text-align: center;
+  margin-bottom: 0px;
+}
+.image-container-carousel > img {
+  width: 100%;
+  max-width: 650px;
+}
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  background: var(--dottedbackground);
+  background: white;
 }
 
 /* Slides */
 .mySlides {
   display: none;
-  padding: 50px;
+  padding: 0px;
   text-align: center;
 }
 .first-slide {
@@ -954,7 +965,7 @@ th:hover {
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -978,7 +989,7 @@ th:hover {
 
 /* The dot/bullet/indicator container */
 .dot-container {
-  background: var(--blueminusdots);
+  background: white;
   border-top: solid white 1px;
   margin-bottom: 20px;
   text-align: center;
@@ -999,7 +1010,7 @@ th:hover {
 
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
-  background-color: white;
+  background-color: black;
 }
 
 /* Add an italic font style to all quotes */
