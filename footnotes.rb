@@ -1,3 +1,4 @@
+# GET FILENAME FROM COMMAND LINE ARGUMENT AND ASSIGN ITS CONTENTS TO A VARIABLE NAMED 'chapter'
 filename = ARGV[0]
  
 fh = open filename
@@ -67,8 +68,8 @@ chapter.gsub!(/<p>\s+<\/p>/, "")
 #ADD NON-BREAKING SPACE BEFORE FOOTNOTE NUMBERS
 chapter.gsub!("<a id=\"_ftnref", "&#8288;<a id=\"_ftnref")
 
-output = File.open( "chapters/chapter4/test.html", "w" )
+#OUTPUT THE REVISED CONTENTS OF chapter TO THE SAME FILE THAT WAS PUT INTO THE COMMAND LINE ARGUMENT AT THE START
+output = File.open( fh, "w" )
 output << "#{chapter}"
 output.close   
 
-# puts chapter
