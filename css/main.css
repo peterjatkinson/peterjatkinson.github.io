@@ -308,6 +308,12 @@ blockquote {
   font-size: .9em;
   margin-bottom: 20px;
 }
+/* BIBLIOGRAPHY STYLES */
+.bib-hang {
+  padding-left: 40px;
+  text-indent:-40px !important;
+}
+
 /* BOX STYLES */
 .box {
   margin: 30px 0;
@@ -635,8 +641,15 @@ th:hover {
   background-repeat: no-repeat;
 }
 #chapter3 {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/c/cf/Dante_Gabriel_Rossetti_-_Beata_Beatrix%2C_1864-1870.jpg);
-  background-position: top;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/88/Paradise_%28Paradiso%29_II.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#chapter4 {
+  background: url("/images/walshe-design.webp");
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
