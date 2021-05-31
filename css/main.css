@@ -1360,6 +1360,12 @@ q {
   #chapter3 {
     background-attachment: initial;
   }
+  #chapter4 {
+    background-attachment: initial;
+  }
+  #chapter5 {
+    background-attachment: initial;
+  }
   /* CHAPTER STYLES */
   .chapter {
     padding: 50px 10px 40px;
