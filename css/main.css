@@ -312,6 +312,7 @@ blockquote {
 .bib-hang {
   padding-left: 40px;
   text-indent:-40px !important;
+  margin-bottom: 5px !important;
 }
 
 /* BOX STYLES */
@@ -530,6 +531,21 @@ sup {
 }
 
 /* TABLE STYLES */
+.table-static {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.table-static > th, td {
+  text-align: left !important;
+}
+.table-static tr:nth-child(odd) {
+  background-color: #dee0f7;
+}
+.table-static tr:nth-child(even) {
+ background-color: #fff;
+}
+
+/* Sortable tables */
 .table-container {
   overflow-x:auto;
   margin: 3em;
@@ -1352,5 +1368,4 @@ q {
   .image-container > img {
     max-width: 95vw;
   }
-  
 }
