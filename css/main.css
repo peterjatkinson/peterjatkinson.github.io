@@ -837,6 +837,53 @@ th:hover {
   background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rhinegold_and_the_Valkyries_p_004.jpg/800px-Rhinegold_and_the_Valkyries_p_004.jpg);
   background-size: cover;
 }
+#chapter1Tile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Henry_Treffry_Dunn_%281838-1899%29_-_Sir_Launcelot_in_the_Queen%27s_Chamber_%28after_Dante_Gabriel_Rossetti%29_-_1288987_-_National_Trust.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#chapter2Tile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Wagner_-_Parsifal_-_The_temple_of_the_gral_-_Pach_Brothers_-_The_Victrola_book_of_the_opera.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#chapter3Tile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/88/Paradise_%28Paradiso%29_II.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#chapter4Tile {
+  background: url("/images/walshe-design.webp");
+  background-size: cover;
+  background-position: top;
+}
+#chapter5Tile {
+  background: url("/images/chapter5/don_score_cover.jpg");
+  background-size: cover;
+  background-position: top;
+}
+#chapter6Tile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/a/a6/King-Arthur%27s-Castle-q75-1759x1228.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#postludeTile {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
+  background-size: cover;
+  background-position: top;
+}
+/* 
+
+
+#chapter5 {
+  background: url("/images/chapter5/don_score_cover.jpg");
+}
+#chapter6 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/a/a6/King-Arthur%27s-Castle-q75-1759x1228.jpg);
+}
+#postlude {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
+} */
 
 .grid-tile > p {
   border-radius: 15px;
