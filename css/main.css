@@ -670,6 +670,13 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#chapter5 {
+  background: url("/images/chapter5/don_score_cover.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero > * {
   color: white;
 }
