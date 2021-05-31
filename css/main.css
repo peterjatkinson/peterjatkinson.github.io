@@ -677,6 +677,20 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#chapter6 {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/a/a6/King-Arthur%27s-Castle-q75-1759x1228.jpg);
+  background-position: right;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#postlude {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
+  background-position: right;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero > * {
   color: white;
 }
@@ -1366,6 +1380,12 @@ q {
   #chapter5 {
     background-attachment: initial;
   }
+  #chapter6 {
+    background-attachment: initial;
+  }
+  #postlude {
+    background-attachment: initial;
+  }
   /* CHAPTER STYLES */
   .chapter {
     padding: 50px 10px 40px;
@@ -1380,5 +1400,13 @@ q {
   }
   .image-container > img {
     max-width: 95vw;
+  }
+  .dropcap:first-letter {
+    float: left;
+    font-size: 55px;
+    line-height: 40px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 3px;
   }
 }
