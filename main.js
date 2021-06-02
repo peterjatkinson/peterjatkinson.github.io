@@ -19,6 +19,7 @@ function openCity(cityName) {
 
 function hamburger(x) {
   x.classList.toggle("hamburger-to-x");
+  $(".header-title").toggle();
 }
 
 

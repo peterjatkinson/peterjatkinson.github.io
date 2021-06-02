@@ -53,15 +53,14 @@ h1 {
   z-index: 99999; /* Stops transparent elements apearing on top of the header when you scroll through a page */
 }
 .header-title {
-  margin: 0 0 0 50px;
-  font-size: 2em;
+  margin: 3px 0 0 3em;
+  font-size: 1.8em;
   text-decoration: none;
 }
 .header-title > a {
   text-decoration: none;
   color: white;
-  font-family: 'Markazi Text', serif;
-  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
 }
 .header > a {
   text-decoration: none;
@@ -691,6 +690,13 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#bibliography {
+  background: url("/images/bibliography/bib_hero.jpg");
+  background-position: right;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero > * {
   color: white;
 }
@@ -869,6 +875,11 @@ th:hover {
 }
 #postludeTile {
   background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#bibliographyTile {
+  background: url("/images/bibliography/bib_hero.jpg");
   background-size: cover;
   background-position: top;
 }
@@ -1146,7 +1157,8 @@ q {
     padding: 0;
   }
   .header-title {
-    display: none;
+    font-size: 1.6em;
+    margin: 18px 15px 5px 10px;
   }
   /* ICON STYLES - Ideally want this to shrink responsively though*/ 
   .tall-side-icon {
@@ -1431,6 +1443,9 @@ q {
     background-attachment: initial;
   }
   #postlude {
+    background-attachment: initial;
+  }
+  #bibliography {
     background-attachment: initial;
   }
   /* CHAPTER STYLES */
