@@ -297,7 +297,9 @@ blockquote {
   padding-right: 8px;
   padding-left: 3px;
 }
-
+.squarestop {
+  color:#77788c
+}
 /* Footnote styles */
 [id^="_ftnref"] {
   vertical-align: top;
@@ -792,6 +794,20 @@ th:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#appendixI {
+  background: url("/images/appendixITile.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#appendixII {
+  background: url("/images/chapter3/ex3_9_1.webp");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #bibliography {
   background: url("/images/bibliography/bib_hero.jpg");
   background-position: right;
@@ -977,6 +993,16 @@ th:hover {
 }
 #postludeTile {
   background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
+  background-size: cover;
+  background-position: top;
+}
+#appendixITile {
+  background: url("/images/appendixITile.jpg");
+  background-size: cover;
+  background-position: top;
+}
+#appendixIITile {
+  background: url("/images/chapter3/ex3_9_1.webp");
   background-size: cover;
   background-position: top;
 }
@@ -1533,6 +1559,12 @@ q {
     background-attachment: initial;
   }
   #postlude {
+    background-attachment: initial;
+  }
+  #appendixI {
+    background-attachment: initial;
+  }
+  #appendixII {
     background-attachment: initial;
   }
   #bibliography {
