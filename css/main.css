@@ -985,18 +985,6 @@ th:hover {
   background-size: cover;
   background-position: top;
 }
-/* 
-
-
-#chapter5 {
-  background: url("/images/chapter5/don_score_cover.jpg");
-}
-#chapter6 {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/a/a6/King-Arthur%27s-Castle-q75-1759x1228.jpg);
-}
-#postlude {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/6/60/Max_Br%C3%BCckner_-_Otto_Henning_-_Richard_Wagner_-_Final_scene_of_G%C3%B6tterd%C3%A4mmerung_-_crop.jpg);
-} */
 
 .grid-tile > p {
   border-radius: 15px;
