@@ -300,6 +300,9 @@ blockquote {
 .squarestop {
   color:#77788c
 }
+.scale-degree {
+  transform: translate(0px, 5.5px);
+}
 /* Footnote styles */
 [id^="_ftnref"] {
   vertical-align: top;
