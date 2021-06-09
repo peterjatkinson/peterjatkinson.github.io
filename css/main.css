@@ -492,6 +492,17 @@ blockquote {
 .hide-description {
   display: none;
 }
+.description > h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.description > p {
+  text-indent: 40px;
+  margin-bottom: 20px;
+
+}
 #LondonB {
   opacity: 0.6;
 }

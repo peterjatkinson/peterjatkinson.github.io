@@ -25,24 +25,38 @@ function hamburger(x) {
 
 //  Tabs with jquery
 $(document).ready(function(){
-  $("#LondonB").click(function(){
+  $("#GueneverB").fadeTo(1, 0.6);
+  $("#GueneverB").click(function(){
     $(".description").hide();
-    $("#LondonP").slideToggle(0); // Note can change value of slide toggle to e.g. "fast" to create an animated appearance of it
+    $("#GueneverP").slideToggle(0); // Note can change value of slide toggle to e.g. "fast" to create an animated appearance of it
     $(".tab-button").fadeTo("fast", 1);
-    $("#LondonB").fadeTo(1, 0.6);
+    $("#GueneverB").fadeTo(1, 0.6);
   });
-  $("#ParisB").click(function(){
+  $("#CaedmarB").click(function(){
     $(".description").hide();
-    $("#ParisP").slideToggle(0);
+    $("#CaedmarP").slideToggle(0);
     $(".tab-button").fadeTo("fast", 1);
-    $("#ParisB").fadeTo(1, 0.6);
+    $("#CaedmarB").fadeTo(1, 0.6);
   });
-  $("#TokyoB").click(function(){
+  $("#BirthB").click(function(){
     $(".description").hide();
-    $("#TokyoP").slideToggle(0);
+    $("#BirthP").slideToggle(0);
     $(".tab-button").fadeTo("fast", 1);
-    $("#TokyoB").fadeTo(1, 0.6);
+    $("#BirthB").fadeTo(1, 0.6);
   });
+  $("#DonB").click(function(){
+    $(".description").hide();
+    $("#DonP").slideToggle(0);
+    $(".tab-button").fadeTo("fast", 1);
+    $("#DonB").fadeTo(1, 0.6);
+  });
+  $("#DylanB").click(function(){
+    $(".description").hide();
+    $("#DylanP").slideToggle(0);
+    $(".tab-button").fadeTo("fast", 1);
+    $("#DylanB").fadeTo(1, 0.6);
+  });
+
   // MOBILE HEADER TOGGLE
   $(".hamburger").click(function() {
     $(".header-nav").slideToggle(400);
