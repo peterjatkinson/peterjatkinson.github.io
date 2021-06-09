@@ -1161,84 +1161,123 @@ th:hover {
 
 /* SLIDESHOW/CAROUSEL STYLES */
 
-.image-container-carousel {
-  text-align: center;
-  margin-bottom: 0px;
+.myslides {
+  display: none;
 }
-.image-container-carousel > img {
-  width: 100%;
-  max-width: 650px;
-}
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  background: white;
+.mySlides > img {
+  max-width: 90%;
+  margin: 0 35px 0 35px;
 }
 
-/* Slides */
-.mySlides {
-  display: none;
-  padding: 0px;
-  text-align: center;
+.slideshow-container {
+  max-width: 840px;
+  /* change above to 100% for full screen and centred examples*/
+  position: relative;
+  margin: auto;
 }
-.first-slide {
-  display: block;
-}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  top: 0%;
+  padding: 10px 10px;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 15px;
+  user-select: pointer;
+  background-color: #77788c;
 }
 
-/* The dot/bullet/indicator container */
-.dot-container {
-  background: white;
-  border-top: solid white 1px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding: 20px;
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.prev:hover, .next:hover {
+  background-color: #b6b7c2;
 }
 
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-  background-color: black;
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .2s;
+  animation-name: fade;
+  animation-duration: .2s;
 }
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media(max-width: 600px) {
+  .prev, .next {
+    font-size: 11px;
+    padding: 25px 10px;
+  }
+  .mySlides > img {
+/*     max-width: 80%; */
+    margin-left: 30px;
+  }
+}
+@media(max-width: 480px) {
+    .mySlides > img {
+    max-width: 82%;
+  }
+}
+
+/* SECOND SET */
+.myslides2 {
+  display: none;
+}
+.mySlides2 > img {
+  max-width: 90%;
+  margin: 0 35px 0 35px;
+}
+@media(max-width: 600px) {
+  .mySlides2 > img {
+/*     max-width: 80%; */
+    margin-left: 30px;
+  }
+}
+@media(max-width: 480px) {
+    .mySlides2 > img {
+    max-width: 82%;
+  }
+}
+/* THIRD SET */
+.myslides3 {
+  display: none;
+}
+.mySlides3 > img {
+  max-width: 90%;
+  margin: 0 35px 0 35px;
+}
+@media(max-width: 600px) {
+  .mySlides3 > img {
+/*     max-width: 80%; */
+    margin-left: 30px;
+  }
+}
+@media(max-width: 480px) {
+    .mySlides3 > img {
+    max-width: 82%;
+  }
+}
+
+
+
 
 /* Add an italic font style to all quotes */
 q {
